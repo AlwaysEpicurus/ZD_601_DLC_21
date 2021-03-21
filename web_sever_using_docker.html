@@ -112,8 +112,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 ml-auto mr-auto text-center">
-                    <h2 class="title">Who we are?</h2>
-                    <h5 class="description">According to the National Oceanic and Atmospheric Administration, Ted, Scambos, NSIDClead scentist, puts the potentially record low maximum sea ice extent tihs year down to low ice extent in the Pacific and a late drop in ice extent in the Barents Sea.</h5>
+                    <h2 class="title">Overview</h2>
+                    <h5 class="description">
+                        The goal of this page is to provide a basic tutorial of how to set up a web server on your local computer using Docker.
+                    </h5>
                 </div>
             </div>
             <div class="separator separator-primary"></div>
@@ -122,26 +124,39 @@
                     <div class="col-md-6">
                         <div class="image-container image-left" style="background-image: url('./assets/img/login.jpg')">
                             <!-- First image on the left side -->
-                            <p class="blockquote blockquote-primary">"Over the span of the satellite record, Arctic sea ice has been declining significantly, while sea ice in the Antarctichas increased very slightly"
+                            <!-- <p class="blockquote blockquote-primary">"Over the span of the satellite record, Arctic sea ice has been declining significantly, while sea ice in the Antarctichas increased very slightly"
                                 <br>
                                 <br>
                                 <small>-NOAA</small>
-                            </p>
+                            </p> -->
                         </div>
                         <!-- Second image on the left side of the article -->
-                        <div class="image-container" style="background-image: url('./assets/img/bg3.jpg')"></div>
+                        <div class="image-container" style="background-image: url('./images/Screenshot13.jpg')"></div>                        
                     </div>
                     <div class="col-md-5">
                         <!-- First image on the right side, above the article -->
                         <div class="image-container image-right" style="background-image: url('./assets/img/bg1.jpg')"></div>
-                        <h3>So what does the new record for the lowest level of winter ice actually mean</h3>
-                        <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens with climate change. Even if the Arctic continues to be one of the fastest-warming regions of the world, it will always be plunged into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural reasons, there’s huge variety of the state of the ice.
-                        </p>
-                        <p>
-                            For a start, it does not automatically follow that a record amount of ice will melt this summer. More important for determining the size of the annual thaw is the state of the weather as the midnight sun approaches and temperatures rise. But over the more than 30 years of satellite records, scientists have observed a clear pattern of decline, decade-by-decade.
-                        </p>
-                        <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens with climate change. Even if the Arctic continues to be one of the fastest-warming regions of the world, it will always be plunged into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural reasons, there’s huge variety of the state of the ice.
-                        </p>
+                        <h3>Tutorial</h3>
+                        <ol>
+                            <li> Install <a href="https://www.docker.com/products/docker-desktop">Docker</a></li>
+                            <li> After installing Docker, run a test to see that the installation was a success. To do so, type “docker run hello-world” and you should see "Hello from Docker!", among other helpful tips</li>
+                            <li> Next, pull an Ubuntu image from Docker using “docker pull ubuntu”. You should see that it has "Download newer image for ubuntu:latest", among other lines.</li>
+                            <li> To see that the Ubuntu image was pulled correctly, type “docker images” to check the existing Docker images on your local computer. For example, you should see the “ubuntu” image, which indicates that it was successfully pulled.</li>
+                            <li> Now, we are going to run the Ubuntu image to start a Docker container, and then log into this Ubuntu container. Type “docker run -it ubuntu:latest /bin/bash”, and check to see if a bash command prompt pops up. This command first runs docker, creates an interactive shell with “-it”, and uses the ubuntu docker image (:latest indicates the TAG). In this case, the string after "root@" is the container ID.</li>
+                            <li> Install the necessary applications into this Ubuntu container with “apt-get update”. If this fails, restart Docker.</li>
+                            <li> Next, install apache2 with “apt-get install apache2”.</li>
+                            <li> To edit the html files, install vim editor with “apt-get install vim”</li>
+                            <li> To exit the Ubuntu container, type “exit”</li>
+                            <li> To check the container, use “docker ps -a”</li>
+                            <li> To commit the container and create a new Docker image, type ”docker commit <container id> ubuntu-my_apache2”. The <contained id> is the same as discussed before, and “ubuntu-my_apache2” is the name of the new Docker image.</li>
+                            <li> To check the new images, use “docker images”</li>
+                            <li> To share data between the Docker container and the host, type “docker run -it -p 127.0.0.1:80:80 -v C:\DockerApache:/a_dir_in_container ubuntu-my_apache2 /bin/bash”. “-p” exposes a port of the Docker container, and “-v” binds a host directory to the Docker container.</li>
+                            <li> Use the command "pwd" to check the present working directory, and then go into the html directory "/var/www/htm" with "cd /var/www/htm"</li>
+                            <li> Use "vi index.html" to create the "index.html" page. To insert into the file, use the "i" key (it will show --INSERT--)</li>
+                            <li> Once you have inserted your code, hit the escape key and then type ":wq" to write to the file and quit</li>
+                            <li> Now that the index.html page has been created, use "/etc/init.d/apache2 restart" in your Docker container to start the apache service</li>
+                            <li> Within the browser of your choice, access "127.0.0.1" and you can see your website.</li>
+                        </ol>
                     </div>
                 </div>
             </div>
