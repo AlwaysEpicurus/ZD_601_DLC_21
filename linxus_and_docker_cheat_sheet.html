@@ -97,7 +97,7 @@
 <!-- End Navbar -->
 <div class="wrapper">
     <div class="page-header page-header-small">
-        <div class="page-header-image" data-parallax="true" style="background-image: url('./assets/img/bg6.jpg');">
+        <div class="page-header-image" data-parallax="true" style="background-image: url('./images/dockerlogin.jpg');">
         </div>
         <div class="content-center">
             <div class="container">
@@ -122,7 +122,7 @@
             <div class="section-story-overview">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="image-container image-left" style="background-image: url('./assets/img/login.jpg')">
+                        <div class="image-container image-left" style="background-image: url('./images/linuxPenguin2.jpg')">
                             <!-- First image on the left side -->
                             <!-- <p class="blockquote blockquote-primary">"Over the span of the satellite record, Arctic sea ice has been declining significantly, while sea ice in the Antarctichas increased very slightly"
                                 <br>
@@ -131,11 +131,11 @@
                             </p> -->
                         </div>
                         <!-- Second image on the left side of the article -->
-                        <div class="image-container" style="background-image: url('./assets/img/bg3.jpg')"></div>
+                        <div class="image-container" style="background-image: url('./images/docker.jpg')"></div>
                     </div>
                     <div class="col-md-5">
                         <!-- First image on the right side, above the article -->
-                        <div class="image-container image-right" style="background-image: url('./assets/img/bg1.jpg')"></div>
+                        <div class="image-container image-right" style="background-image: url('./images/linuxPenguin.jpg')"></div>
                         <h3>Basic Commands</h3>
                         <ol>
                             <li>pwd: find the path of the current working directory</li>
@@ -180,8 +180,20 @@
                                 <li>"chown user1 ex.txt" would make user1 the owner of "ex.txt"</li>
                             </ul>
                         </ol>
+                        <h3>How to log into your Docker container</h3>
+                        <ol>
+                            <li>Use format: "docker login [options] [server]</li>
+                            <li>Options: (--password, -p), (--username, -u)</li>
+                            <li>Examples:</li>
+                            <ul>
+                                <li>docker login localhost:8080</li>
+                                <li>docker exec -it [container_id] /bin/bash --> important to know the container id, list running containers to do so</li>
+                            </ul>
+                        </ol>
                         <h3>Sources</h3>
                         <p><a href="https://www.hostinger.com/tutorials/linux-commands">35 Linux Basic Commands Every User Should Know</a></p>
+                        <p><a href="https://docs.docker.com/engine/reference/commandline/login/">docker login</a></p>
+                        <p><a href="https://techeplanet.com/login-to-docker-container/#:~:text=The%20exec%20command%20helps%20us%20to%20login%20to,to%20the%20container.%20docker%20exec%20-it%20container_id%20%2Fbin%2Fbash">Login to Docker container</a></p>
                     </div>
                 </div>
             </div>
