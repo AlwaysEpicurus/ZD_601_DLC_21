@@ -112,8 +112,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 ml-auto mr-auto text-center">
-                    <h2 class="title">Who we are?</h2>
-                    <h5 class="description">According to the National Oceanic and Atmospheric Administration, Ted, Scambos, NSIDClead scentist, puts the potentially record low maximum sea ice extent tihs year down to low ice extent in the Pacific and a late drop in ice extent in the Barents Sea.</h5>
+                    <h2 class="title">Overview</h2>
+                    <h5 class="description">
+                        This page aims to provide a user with some basic Linux commands.
+                    </h5>
                 </div>
             </div>
             <div class="separator separator-primary"></div>
@@ -122,11 +124,11 @@
                     <div class="col-md-6">
                         <div class="image-container image-left" style="background-image: url('./assets/img/login.jpg')">
                             <!-- First image on the left side -->
-                            <p class="blockquote blockquote-primary">"Over the span of the satellite record, Arctic sea ice has been declining significantly, while sea ice in the Antarctichas increased very slightly"
+                            <!-- <p class="blockquote blockquote-primary">"Over the span of the satellite record, Arctic sea ice has been declining significantly, while sea ice in the Antarctichas increased very slightly"
                                 <br>
                                 <br>
                                 <small>-NOAA</small>
-                            </p>
+                            </p> -->
                         </div>
                         <!-- Second image on the left side of the article -->
                         <div class="image-container" style="background-image: url('./assets/img/bg3.jpg')"></div>
@@ -134,14 +136,52 @@
                     <div class="col-md-5">
                         <!-- First image on the right side, above the article -->
                         <div class="image-container image-right" style="background-image: url('./assets/img/bg1.jpg')"></div>
-                        <h3>So what does the new record for the lowest level of winter ice actually mean</h3>
-                        <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens with climate change. Even if the Arctic continues to be one of the fastest-warming regions of the world, it will always be plunged into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural reasons, there’s huge variety of the state of the ice.
-                        </p>
-                        <p>
-                            For a start, it does not automatically follow that a record amount of ice will melt this summer. More important for determining the size of the annual thaw is the state of the weather as the midnight sun approaches and temperatures rise. But over the more than 30 years of satellite records, scientists have observed a clear pattern of decline, decade-by-decade.
-                        </p>
-                        <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens with climate change. Even if the Arctic continues to be one of the fastest-warming regions of the world, it will always be plunged into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural reasons, there’s huge variety of the state of the ice.
-                        </p>
+                        <h3>Basic Commands</h3>
+                        <ol>
+                            <li>pwd: find the path of the current working directory</li>
+                            <li>cd: change directory</li>
+                            <ul>
+                                <li>Start with path "/home/user/Documents"</li>
+                                <li>To access the subdirectory "Photos", use "cd Photos"</li>
+                            </ul>
+                            <li>ls: view contents of a directory</li>
+                            <ul>
+                                <li>"ls /home/user/Documents" to view the contents of the "Documents" directory</li>
+                            </ul>
+                            <li>cat: list the contents of a file on the standard output</li>
+                            <ul>
+                                <li>"cat example.txt" would output the contents of the specified file.</li>
+                                <li>"cat > example.txt" would create a new file "example.txt"</li>
+                            </ul>
+                            <li>cp: copy files from currenty dir to a different dir</li>
+                            <ul>
+                                <li>"cp ex.txt /home/user/Documents" would copy "ex.txt" to "/home/user/Documents"</li>
+                            </ul>
+                            <li>mv: move file, or rename file</li>
+                            <ul>
+                                <li>"mv ex.txt /home/user/Documents" would move "ex.txt" to specified path</li>
+                            </ul>
+                            <li>mkdir: make a new directory</li>
+                            <ul>
+                                <li>"mkdir example" would create new directory "example"</li>
+                            </ul>
+                            <li>rmdir: delete only an empty directory</li>
+                            <ul>
+                                <li>"rmdir example" would remove this directory, only if it was empty</li>
+                            </ul>
+                            <li>rm: delete directory and content within it</li>
+                            <li>touch: create blank new file</li>
+                            <ul>
+                                <li>"touch hello-world.txt" would create an empty file named "hello-world.txt"</li>
+                            </ul>
+                            <li>chmod: change the read, write, and execute permissions of files and directories</li>
+                            <li>chown: change or transfer ownership of a file to the specified user</li>
+                            <ul>
+                                <li>"chown user1 ex.txt" would make user1 the owner of "ex.txt"</li>
+                            </ul>
+                        </ol>
+                        <h3>Sources</h3>
+                        <p><a href="https://www.hostinger.com/tutorials/linux-commands">35 Linux Basic Commands Every User Should Know</a></p>
                     </div>
                 </div>
             </div>
