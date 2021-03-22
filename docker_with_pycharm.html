@@ -83,7 +83,7 @@
                     <a class="nav-link" href="./about.html">ABOUT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/linxus_and_docker_cheat_sheet.html">CHEATSHEET</a>
+                    <a class="nav-link" href="linxus_and_docker_cheat_sheet.html">CHEATSHEET</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" rel="tooltip" title="Follow Us on Git" data-placement="bottom"
@@ -103,7 +103,7 @@
         </div>
         <div class="content-center">
             <div class="container">
-                <h1 class="title">Sources</h1>
+                <h1 class="title">Docker with Pycharm</h1>
                 <div class="text-center">
 
                 </div>
@@ -114,10 +114,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 ml-auto mr-auto text-center">
-                    <h2 class="title">Who we are?</h2>
-                    <h5 class="description">According to the National Oceanic and Atmospheric Administration, Ted,
-                        Scambos, NSIDClead scentist, puts the potentially record low maximum sea ice extent tihs year
-                        down to low ice extent in the Pacific and a late drop in ice extent in the Barents Sea.</h5>
+                    <h2 class="title">Overview</h2>
+                    <h5 class="description">
+                        This page aims to help users in getting comfortable with using Docker within Pycharm.
+                    </h5>
                 </div>
             </div>
             <div class="separator separator-primary"></div>
@@ -126,13 +126,13 @@
                     <div class="col-md-6">
                         <div class="image-container image-left" style="background-image: url('./assets/img/login.jpg')">
                             <!-- First image on the left side -->
-                            <p class="blockquote blockquote-primary">"Over the span of the satellite record, Arctic sea
+                            <!-- <p class="blockquote blockquote-primary">"Over the span of the satellite record, Arctic sea
                                 ice has been declining significantly, while sea ice in the Antarctichas increased very
                                 slightly"
                                 <br>
                                 <br>
                                 <small>-NOAA</small>
-                            </p>
+                            </p> -->
                         </div>
                         <!-- Second image on the left side of the article -->
                         <div class="image-container" style="background-image: url('./assets/img/bg3.jpg')"></div>
@@ -141,26 +141,26 @@
                         <!-- First image on the right side, above the article -->
                         <div class="image-container image-right"
                              style="background-image: url('./assets/img/bg1.jpg')"></div>
-                        <h3>So what does the new record for the lowest level of winter ice actually mean</h3>
-                        <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and
-                            that process will continue whatever happens with climate change. Even if the Arctic
-                            continues to be one of the fastest-warming regions of the world, it will always be plunged
-                            into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural
-                            reasons, there’s huge variety of the state of the ice.
-                        </p>
-                        <p>
-                            For a start, it does not automatically follow that a record amount of ice will melt this
-                            summer. More important for determining the size of the annual thaw is the state of the
-                            weather as the midnight sun approaches and temperatures rise. But over the more than 30
-                            years of satellite records, scientists have observed a clear pattern of decline,
-                            decade-by-decade.
-                        </p>
-                        <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and
-                            that process will continue whatever happens with climate change. Even if the Arctic
-                            continues to be one of the fastest-warming regions of the world, it will always be plunged
-                            into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural
-                            reasons, there’s huge variety of the state of the ice.
-                        </p>
+                        <h3>Tutorial</h3>
+                        <ol>
+                            <li>Make sure <a href="https://www.jetbrains.com/pycharm/">PyCharm</a> and <a href="https://git-scm.com/">Git</a> are downloaded, and ensure Docker is running.</li>
+                            <li>Creat a new directory where your python script will reside</li>
+                            <li>Within this new directory, create a new python script with any program you want</li>
+                            <li>Create a new file "Dockerfile". It is important that there is no file extension with the Dockerfile</li>
+                            <li>Within this Dockerfile, write "FROM python:3", "ADD [dir_name] /[dir_name]", "RUN pip install *", "CMD ["python", "/src/[python_name.py]"]". Each new command is on a different line.</li>
+                            <ul>
+                                <li>"FROM python:3": install Python 3</li>
+                                <li>"ADD [dir_name] /[dir_name]": take the code in [dir_name], and move it to a [dir_name] folder</li>
+                                <li>"RUN pip install *": depending on your program, this is where you install all of your needed packages</li>
+                                <li>"CMD ["python", "/src/[python_name.py]"]": run the python file from the given directory</li>
+                            </ul>
+                            <li>To get PyCharm connected to the Docker server, go into "File"-->"Settings"-->"Build, Execution, Deployment"-->"Docker"-->"+". Once that is done, hit "Apply" and "Ok"</li>
+                            <li>Now, at the top click "Add Configuration"-->"+"-->"Docker"-->"Dockerfile". From here, change the name to whatever is relevant to your program, put in a value for "Image tag", and then hit "Apply"</li>
+                            <li>Hit the play button (Green play button at the top) to run the template</li>
+                            <li>Within this Docker console is the expected output of the program, along with other Docker items</li>
+                            <li>To add a new interpreter, go to the bottom of the page and find where it displays what version of python you are using "ex: Python 3.8", and then click on it and click "Add Interpreter"</li>
+                            <li>From here, go to "Docker"-->"OK", and then go back to the interpreter page and click on the new Docker interpreter</li>
+                        </ol>
                     </div>
                 </div>
             </div>
