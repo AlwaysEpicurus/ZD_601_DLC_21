@@ -57,11 +57,9 @@
                     Containerization</a>
                 <a class="dropdown-item" href="web_sever_using_docker.html">Setting a Web Server with Docker</a>
                 <a class="dropdown-item" href="linux_docker_cheatsheet.html">Linux & Docker Cheatsheet</a>
-                <a class="dropdown-item" href="docker_with_pycharm.html">Docker with Pycharm</a>
+                <a class="dropdown-item active" href="docker_with_pycharm.html">Docker with Pycharm</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="about.html">About</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="sources.html">Sources</a>
             </div>
         </div>
         <div class="navbar-translate">
@@ -143,23 +141,48 @@
                              style="background-image: url('./images/pycharm.jpg')"></div>
                         <h3>Tutorial</h3>
                         <ol>
-                            <li>Make sure <a href="https://www.jetbrains.com/pycharm/">PyCharm</a> and <a href="https://git-scm.com/">Git</a> are downloaded, and ensure Docker is running.</li>
+                            <li>Make sure <a href="https://www.jetbrains.com/pycharm/">PyCharm</a> and <a
+                                    href="https://git-scm.com/">Git</a> are downloaded, and ensure Docker is running.
+                            </li>
                             <li>Creat a new directory where your python script will reside</li>
                             <li>Within this new directory, create a new python script with any program you want</li>
-                            <li>Create a new file "Dockerfile". It is important that there is no file extension with the Dockerfile</li>
-                            <li>Within this Dockerfile, write "FROM python:3", "ADD [dir_name] /[dir_name]", "RUN pip install *", "CMD ["python", "/src/[python_name.py]"]". Each new command is on a different line.</li>
+                            <li>Create a new file "Dockerfile". It is important that there is no file extension with the
+                                Dockerfile
+                            </li>
+                            <li>Within this Dockerfile, write "FROM python:3", "ADD [dir_name] /[dir_name]", "RUN pip
+                                install *", "CMD ["python", "/src/[python_name.py]"]". Each new command is on a
+                                different line.
+                            </li>
                             <ul>
                                 <li>"FROM python:3": install Python 3</li>
-                                <li>"ADD [dir_name] /[dir_name]": take the code in [dir_name], and move it to a [dir_name] folder</li>
-                                <li>"RUN pip install *": depending on your program, this is where you install all of your needed packages</li>
-                                <li>"CMD ["python", "/src/[python_name.py]"]": run the python file from the given directory</li>
+                                <li>"ADD [dir_name] /[dir_name]": take the code in [dir_name], and move it to a
+                                    [dir_name] folder
+                                </li>
+                                <li>"RUN pip install *": depending on your program, this is where you install all of
+                                    your needed packages
+                                </li>
+                                <li>"CMD ["python", "/src/[python_name.py]"]": run the python file from the given
+                                    directory
+                                </li>
                             </ul>
-                            <li>To get PyCharm connected to the Docker server, go into "File"-->"Settings"-->"Build, Execution, Deployment"-->"Docker"-->"+". Once that is done, hit "Apply" and "Ok"</li>
-                            <li>Now, at the top click "Add Configuration"-->"+"-->"Docker"-->"Dockerfile". From here, change the name to whatever is relevant to your program, put in a value for "Image tag", and then hit "Apply"</li>
+                            <li>To get PyCharm connected to the Docker server, go into "File"-->"Settings"-->"Build,
+                                Execution, Deployment"-->"Docker"-->"+". Once that is done, hit "Apply" and "Ok"
+                            </li>
+                            <li>Now, at the top click "Add Configuration"-->"+"-->"Docker"-->"Dockerfile". From here,
+                                change the name to whatever is relevant to your program, put in a value for "Image tag",
+                                and then hit "Apply"
+                            </li>
                             <li>Hit the play button (Green play button at the top) to run the template</li>
-                            <li>Within this Docker console is the expected output of the program, along with other Docker items</li>
-                            <li>To add a new interpreter, go to the bottom of the page and find where it displays what version of python you are using "ex: Python 3.8", and then click on it and click "Add Interpreter"</li>
-                            <li>From here, go to "Docker"-->"OK", and then go back to the interpreter page and click on the new Docker interpreter</li>
+                            <li>Within this Docker console is the expected output of the program, along with other
+                                Docker items
+                            </li>
+                            <li>To add a new interpreter, go to the bottom of the page and find where it displays what
+                                version of python you are using "ex: Python 3.8", and then click on it and click "Add
+                                Interpreter"
+                            </li>
+                            <li>From here, go to "Docker"-->"OK", and then go back to the interpreter page and click on
+                                the new Docker interpreter
+                            </li>
                         </ol>
                     </div>
                 </div>
